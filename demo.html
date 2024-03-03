@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Simple Music Player</title>
+<!-- Load FontAwesome icons -->
+<link rel="stylesheet"
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<!-- Load the custom CSS style file -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    img{
+      height: 100px;
+      width: 100px;
+      border-radius: 40%;
+      float: left;
+   }
+  .header{
+     text-align: center;
+     font-size: 27px;
+   }
+</style>
+
+</head>
+<body>
+    <header>
+        <img src="https://ci3.googleusercontent.com/meips/ADKq_NbX1am19_vA1KDO8MTKqOlL7tBCQ7HEKjHHfBYG3Bx8kaEDkk9rKxFuUb-b-LbjU82gSWrt8xXJBB0fAywhUqoDbYu9pGrZOzZmcaRenhgh4YEFqBpyHUhsqgzRz-DoIpIIzMk_dh9F_Wf_IXgmre1tWEvJ_yna4dIEyuxuc07Jd4ZxY_YBJ1d4UunyRPdc9ytgD-12cszZo7KgPnt4pm32NAo1qEs=s0-d-e1-ft#https://dynamic.brandcrowd.com/preview/logodraft/f36f1a6a-0e0a-452e-8ef8-fad40575fc67/image/large.png?bust=4efc742f-76ae-48cc-8209-1fc1f59ad53a" alt="">
+        <h4>テディ@レディ</h4>
+        <div class="header">
+            <h1>Teddy@Reddy</h1>
+            <h1> MUSIC STREAMING APP</h1>
+        </div>
+    </header>
+<div class="player">
+
+	<!-- Define the section for displaying details -->
+	<div class="details">
+	<div class="now-playing">PLAYING x OF y</div>
+	<div class="track-art"></div>
+	<div class="track-name">Track Name</div>
+	<div class="track-artist">Track Artist</div>
+	</div>
+
+	<!-- Define the section for displaying track buttons -->
+	<div class="buttons">
+	<div class="prev-track" onclick="prevTrack()">
+		<i class="fa fa-step-backward fa-2x"></i>
+	</div>
+	<div class="playpause-track" onclick="playpauseTrack()">
+		<i class="fa fa-play-circle fa-5x"></i>
+	</div>
+	<div class="next-track" onclick="nextTrack()">
+		<i class="fa fa-step-forward fa-2x"></i>
+	</div>
+	</div>
+
+	<!-- Define the section for displaying the seek slider-->
+	<div class="slider_container">
+	<div class="current-time">00:00</div>
+	<input type="range" min="1" max="100"
+		value="0" class="seek_slider" onchange="seekTo()">
+	<div class="total-duration">00:00</div>
+	</div>
+
+	<!-- Define the section for displaying the volume slider-->
+	<div class="slider_container">
+	<i class="fa fa-volume-down"></i>
+	<input type="range" min="1" max="100"
+		value="99" class="volume_slider" onchange="setVolume()">
+	<i class="fa fa-volume-up"></i>
+	</div>
+</div>
+
+<!-- Load the main script for the player -->
+<script src="main.js"></script>
+<footer>
+    <div style="text-align: center; display: flex; justify-content: space-evenly;">
+        <h2>&copy; Teddy@Reddy</h2>
+        <h2>&copy; MUSIC STREAMING APP</h2>
+    </div>
+    <div style="text-align: center; display: flex; justify-content: space-evenly;">
+        <h2>&copy; All Copy Rights Are for Teddy@Reddy Website </h2>
+        <br>
+        <h2>support</h2>
+        <h2>Terms & Privacy</h2>
+    </div>
+</footer>
+</body>
+</html>
